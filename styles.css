@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Poppins:wght@100;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+p{
+    font-size: 0.8rem;
+}
+
+hr{
+    width: 1.5rem;
+}
+
+#item1{ 
+    margin-left: auto;
+    margin-right: auto;
+    height: 1.5rem;
+    grid-area: a;}
+.item2{ grid-area: b;}
+.item3{ grid-area: c;}
+.item4{ grid-area: d;}
+.item5{ grid-area: e;}
+.item6{ grid-area: f;}
+.item7{ grid-area: g;}
+.search{height: 0.8rem;}
+
+.header{
+    display: grid;
+    text-align: center;
+    grid-template-areas: 
+    'a a a a a a'
+    'b c d e f g';
+    padding: 1rem 1.5rem;
+}
+
+
+.header> a{
+    font-size: 0.6rem;
+    text-decoration: none;
+    color: black;
+}
+
+/*the first section*/
+.block{
+    padding: 3rem;
+    color: white;
+    text-align: center;
+    background-image: url(./background1.jpg);
+}
+.block> h1{
+    font-weight: bold;
+    font-size: 2.5rem;    
+}
+.block> p{
+    font-size: smaller;
+}
+
+
+/*the second section*/
+.second-block{
+    padding: 3rem;
+    text-align: center;
+}
+
+.btn{
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    background: black;
+    font-size: 0.6rem;
+}
+.second-block> p{
+    margin-bottom: 20px;
+}
+.second-block> hr{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-item{
+    margin-top: 25px;
+}
+
+.grid-item> p{
+    margin-bottom: 15px;
+}
+
+/*Third section*/
+.third-section{
+    background-image: url(./background1.jpg);
+    color: white;
+    padding: 3rem;
+    text-align: center;
+}
+.third-content> p{
+    margin-bottom: 20px;
+}
+.brand-logo{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 0.5rem;
+    gap: 10px;
+}
+.third-content> hr{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*fourth section*/
+.fourth-item>img{
+    height: 100px;
+    width: 200px;
+}
+.fourth-item{
+    margin-top: 20px;
+}
+.fourth-section{
+    padding: 4rem;
+    text-align: center;
+}
+.fourth-section>p{
+    margin-bottom: 20px;
+}
+.fourth-section>hr{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*fifth section*/
+.fifth-section{
+    background-color: aqua;
+    text-align: center;
+    padding: 2rem;
+}
+.white-btn{
+    color: black;
+    background-color: white;
+}
+
+/*last*/
+.last{
+    padding: 2rem 3rem;
+    text-align: center;
+    background-color: black;
+}
+.link, .last>p{
+    font-size: 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+/*FOR DESKTOP VIEW*/
+@media only screen and (min-width: 769px){
+    .header{
+        display: grid;
+        grid-template-areas: 
+        'a b c d e f g';
+        padding: 0.5rem 0.5rem;
+    }
+
+    #item1{
+        align-items: start;
+        margin-right: 55rem;
+        
+    }
+    .search{
+        margin-top: 10%;
+    }
+
+    /*first section*/
+    .block{
+        text-align: start;
+        padding: 4rem 8rem;
+    }
+    .block> h1{
+        margin-right: 80%;
+    }
+    .block> p{
+       font-size: 0.8rem;
+       margin-right: 78%;
+    }
+
+    /*second section*/
+    .second-block{
+        text-align: start;
+        padding: 4rem 8rem;
+    }
+    .second-block> p{
+        margin-bottom: 20px;
+    }
+    .second-block>hr{
+        margin-left: 0;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+    }
+    .grid-item{
+        margin-right: 15%;
+    }
+
+    /*third section*/
+    .third-section{
+        text-align: start;
+        padding: 4rem 8rem;
+    }
+    .third-content> hr{
+        margin-left: 0;
+    }
+    .brand-logo{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*fourth section*/
+    .fourth-section{
+        text-align: start;
+        padding: 4rem 8rem;
+    }
+    .fourth-section>hr{
+        margin-left: 0;
+    }
+    .fourth-item>img{
+        height: 200px;
+        width: 450px;
+    }
+    .fourth-container{
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    .fifth-section{
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+    }
+    .fifth-section>p{
+        padding-top: 0.5rem;
+        margin-right: 10px;
+    }
+}
